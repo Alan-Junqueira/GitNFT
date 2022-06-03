@@ -135,6 +135,10 @@
   color: var(--text-color);
 }
 
+#menuNavigation header .headerInfo strong {
+  color: var(--color-logo);
+}
+
 #menuNavigation .headerImgs {
   padding-left: 8rem;
 }
@@ -208,6 +212,10 @@
   color: var(--text-color);
 }
 
+#about .informationsAbout .textInformationsAbout .linkFromAbout {
+  text-decoration: underline;
+  color: var(--color-logo);
+}
 /*==============WEEK ARTISTS==============*/
 
 #weekArtists {
@@ -279,6 +287,9 @@
   padding-bottom: 5rem;
 }
 
+#weekArtists .titleSections h2 strong {
+  color: var(--color-logo);
+}
 /*==============BEST ARTIRTS==============*/
 #bestArtists {
   background: var(--color-input);
@@ -376,6 +387,18 @@
 
   color: var(--text-color);
 }
+
+#bestArtists .cardsArtists li:hover {
+  background: var(--color-logo);
+}
+
+#bestArtists .cardsArtists p:hover {
+  color: var(--text-color);
+}
+
+#bestArtists .titleSections h2 strong {
+  color: var(--color-logo);
+}
 /*===================================FOOTER============================================*/
 
 #footer {
@@ -388,6 +411,17 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 0 6rem 0;
+}
+
+#footer header a:nth-child(2) {
+  width: 8rem;
+  height: 8rem;
+  background: var(--color-logo);
+}
+
+#footer header a:nth-child(2) img {
+  padding: 2.8rem;
+  transform: rotate(-1.28deg);
 }
 
 #footer .informationsFooter {
@@ -504,10 +538,14 @@
   font-size: 20px;
   line-height: 24px;
 
-  color: var(--subtitle-color)
+  color: var(--subtitle-color);
 }
 
 #footer .socialFooter ul {
   display: flex;
   gap: 5rem;
+}
+
+#footer .informationsFooter .buttonSendFooter h3 strong {
+  color: var(--color-logo);
 }
