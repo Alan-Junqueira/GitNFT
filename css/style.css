@@ -2,6 +2,9 @@
   font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
   text-decoration: none;
+
+  width: 100%;
+  max-width: 143.956rem;
 }
 
 :root {
@@ -18,25 +21,30 @@
 
 /*=======================MENU NAVIGATION===================*/
 #menuNavigation {
-  display: inline-block;
-
-  width: 100vw;
-  height: 100vh;
-
+  display: grid;
   box-sizing: border-box;
+
+  max-height: 100rem;
 }
+
 #menuNavigation .background {
   position: absolute;
+  max-width: 143.956rem;
+  height: 100rem;
   z-index: -1;
   background-repeat: no-repeat;
 }
 
 #menuNavigation nav {
-  display: flex;
+  display: grid;
   align-items: center;
-  justify-content: space-between;
+  grid-template-columns: 1fr 1fr 1fr;
 
-  padding: 5.7rem 8rem 7rem 9rem;
+  padding: 5.7rem 8rem 0 8rem;
+}
+
+#menuNavigation .menu {
+  padding: 0 23.8rem 0 20.3rem;
 }
 
 #menuNavigation .menu ul {
@@ -58,54 +66,103 @@
   font-size: 1.8rem;
   line-height: 2.2rem;
 
+  white-space: nowrap;
+
   color: var(--text-color);
   text-decoration: none;
 }
 
 #menuNavigation .clickCart {
-  padding-right: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: var(--text-color);
+}
+#menuNavigation .clickCart a:nth-child(1) {
+  padding: 1rem 1.5rem 1rem 1.4rem;
+}
+
+#menuNavigation .clickCart a img {
+  width: 3rem;
+  height: 3rem;
 }
 
 #menuNavigation .clickCart button {
-  width: 23rem;
-  height: 5rem;
+  list-style: none;
+  text-decoration: none;
+  border: none;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
   background: var(--text-color);
+}
 
+#menuNavigation .clickCart button a {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
   font-size: 1.6rem;
   line-height: 2rem;
+
+  white-space: nowrap;
+
+  color: var(--black-text);
 }
 
-#menuNavigation header .headerInfo {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  box-sizing: border-box;
-  justify-content: space-around;
+#menuNavigation header {
+  display: grid;
+  grid-template-columns: 31% 1fr 15%;
 
-  padding: 0 8rem 5rem 10rem;
+  padding: 9rem 8rem 0 8rem;
+
+  box-sizing: border-box;
 
   gap: 4rem;
 }
 
-#menuNavigation header .headerInfo aside {
+#menuNavigation header div:nth-child(1) p {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+
+  padding-bottom: 5.5rem;
+
+  color: var(--text-color);
+}
+
+#menuNavigation header div:nth-child(1) aside {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 5.5rem 0 0 0;
-}
-#menuNavigation header .headerInfo .badgeHeader {
-  padding-right: 8rem;
 }
 
-#menuNavigation header .headerInfo h1 {
+#menuNavigation header div:nth-child(1) aside img {
+  width: 16.9rem;
+  height: 8.7rem;
+}
+
+#menuNavigation header div:nth-child(1) aside div h4 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+
+  color: var(--text-color);
+}
+
+#menuNavigation header div:nth-child(1) aside div p {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+
+  color: var(--text-color);
+
+  white-space: nowrap;
+}
+
+#menuNavigation header div:nth-child(2) h1 {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
@@ -115,56 +172,55 @@
   color: var(--text-color);
 }
 
-#menuNavigation header .headerInfo div:nth-child(1) p {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.8rem;
-  line-height: 2.2rem;
-
-  color: var(--text-color);
-}
-
-#menuNavigation header .headerInfo div:nth-child(1) h4 {
+#menuNavigation header div:nth-child(2) h1 Strong {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
-  font-size: 1.8rem;
-  line-height: 2.2rem;
+  font-size: 5rem;
+  line-height: 6.1rem;
 
-  color: var(--text-color);
-}
-
-#menuNavigation header .headerInfo strong {
   color: var(--color-logo);
 }
 
+#menuNavigation header div:nth-child(3) img {
+  width: 20rem;
+  height: 20rem;
+}
+
 #menuNavigation .headerImgs {
-  padding-left: 8rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 1.616rem;
+  row-gap: 6.044rem;
+
+  padding: 10rem 8rem 0 8rem;
 }
 
-#menuNavigation .headerImgs .headersImgsDiv2 {
-  border: 6rem 0 0 0;
-}
-
-#menuNavigation .headersImgs div:nth-child(1),
-#menuNavigation .headersImgs div:nth-child(2) {
-  display: flex;
-  flex-direction: row;
-}
-
-#menuNavigation .headerImgs div img {
-  border: 1px solid #ffffff;
+#menuNavigation .headerImgs img {
+  border: 1px solid var(--text-color);
 }
 /*===============================ABOUT=============================*/
 #about {
   background: var(--color-input);
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 20% 1fr;
+
+  height: 62.37rem;
 }
 
 #about .quantityAbout {
   padding: 13.3rem 6.7rem 0 8.7rem;
+  border-right: 1px solid var(--subtitle-color);
+
+  height: 62.37rem;
+}
+#about .quantityAbout ul {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 7rem;
+
+  padding-bottom: 13.316rem;
 }
 
 #about .quantityAbout h3 {
@@ -188,26 +244,35 @@
 }
 
 #about .informationsAbout {
-  display: block;
-  padding: 7.96rem 0 0 0;
+  display: grid;
+  grid-template-rows: 40% 1fr;
 }
 
-#about .informationsAbout .textInformationsAbout p:nth-child(1) {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.8rem;
-  line-height: 2.2rem;
+#about .informationsAbout .textInformationsAbout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-  color: var(--text-color);
+  padding: 7.6rem 13.8rem 7.1rem 6.8rem;
+  gap: 12.6rem;
 }
+
+#about .informationsAbout .textInformationsAbout div:nth-child(1),
+#about .informationsAbout .textInformationsAbout div:nth-child(2) {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 6.3rem;
+
+  padding-top: 7.9rem;
+}
+
+#about .informationsAbout .textInformationsAbout p:nth-child(1),
 #about .informationsAbout .textInformationsAbout p:nth-child(2) {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 2.2rem;
-  text-decoration-line: underline;
 
   color: var(--text-color);
 }
@@ -216,12 +281,36 @@
   text-decoration: underline;
   color: var(--color-logo);
 }
+
+#about .informationsAbout .imgAbout {
+  width: 115.8rem;
+  height: 30rem;
+}
+
+#about .informationsAbout .imgAbout img {
+  width: 115.2rem;
+  height: 30rem;
+
+  padding: 7.1rem 0 0 0;
+}
 /*==============WEEK ARTISTS==============*/
 
 #weekArtists {
   border-top: 1px solid var(--subtitle-color);
   background: var(--color-input);
   padding: 15rem 8rem 0 8rem;
+}
+
+#weekArtists .astronalts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  column-gap: 51.01rem;
+}
+
+#weekArtists div div a img {
+  width: 5rem;
+  height: 5rem;
 }
 
 #weekArtists .titleSections h2 {
@@ -297,10 +386,10 @@
 }
 
 #bestArtists .titleSections {
-  display: flex;
-  justify-content: center;
   padding-bottom: 12rem;
+  padding-left: calc(45.6rem - 8.5rem);
 }
+
 #bestArtists .titleSections h2 {
   font-family: 'Montserrat';
   font-style: normal;
@@ -320,6 +409,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+#bestArtists .cardsArtists ul div li .imgCards img {
+  padding: 2.5rem 4rem 2.5rem 3.2rem;
 }
 
 #bestArtists .cardsArtists .cards1-3 .bestArtistsName,
@@ -399,6 +492,22 @@
 #bestArtists .titleSections h2 strong {
   color: var(--color-logo);
 }
+
+#bestArtists .seeAllArtists {
+  display: grid;
+}
+
+#bestArtists .seeAllArtists a {
+  display: flex;
+  gap: 1.3rem;
+
+  align-items: center;
+}
+
+#bestArtists .seeAllArtists a img {
+  width: 3rem;
+  height: 3rem;
+}
 /*===================================FOOTER============================================*/
 
 #footer {
@@ -411,6 +520,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 0 6rem 0;
+}
+
+#footer header .logo {
+  width: 27.6rem;
+  height: 4.3rem;
 }
 
 #footer header a:nth-child(2) {
@@ -429,6 +543,10 @@
 
   border-top: 1px solid var(--subtitle-color);
   border-bottom: 1px solid var(--subtitle-color);
+}
+
+#footer .informationsFooter .buttonSendFooter div {
+  display: flex;
 }
 
 #footer .informationsFooter .buttonSendFooter {
@@ -544,6 +662,14 @@
 #footer .socialFooter ul {
   display: flex;
   gap: 5rem;
+
+  width: 27rem;
+  height: 3rem;
+}
+
+#footer .socialFooter img {
+  width: 3rem;
+  height: 3rem;
 }
 
 #footer .informationsFooter .buttonSendFooter h3 strong {
