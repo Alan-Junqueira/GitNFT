@@ -7,6 +7,10 @@
   max-width: 143.956rem;
 }
 
+img {
+  max-width: 100%;
+}
+
 :root {
   --body-background: hsl(0, 0%, 5%);
   --color-logo: hsl(4, 100%, 66%);
@@ -19,6 +23,9 @@
   font-size: 62.5%; /* 1rem = 10px */
 }
 
+body {
+  max-width: 100vw;
+}
 /*=======================MENU NAVIGATION===================*/
 #menuNavigation {
   display: grid;
@@ -138,6 +145,17 @@
 #menuNavigation header div:nth-child(1) aside img {
   width: 16.9rem;
   height: 8.7rem;
+}
+
+#menuNavigation header div:nth-child(1) aside div::before {
+  content: '';
+  display: inline-block;
+  width: 20rem;
+  height: 3.4rem;
+}
+
+#menuNavigation header div:nth-child(1) aside div {
+  padding-left: 0.6rem;
 }
 
 #menuNavigation header div:nth-child(1) aside div h4 {
@@ -483,6 +501,7 @@
 
 #bestArtists .cardsArtists li:hover {
   background: var(--color-logo);
+  color: var(--text-color);
 }
 
 #bestArtists .cardsArtists p:hover {
@@ -584,6 +603,9 @@
   border: none;
 }
 
+#footer .informationsFooter .buttonSendFooter div a button {
+  cursor: pointer;
+}
 #footer .informationsFooter .buttonSendFooter {
   padding-bottom: 8.2rem;
 }
@@ -674,4 +696,9 @@
 
 #footer .informationsFooter .buttonSendFooter h3 strong {
   color: var(--color-logo);
+}
+
+/*==============================JAVA SCRIPT=====================*/
+#bestArtists .cardsArtists ul div .active {
+  color: var(--text-color);
 }
