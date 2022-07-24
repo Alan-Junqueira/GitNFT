@@ -1,35 +1,16 @@
-function hoverUlCards() {
+const cards = document.querySelector('.cards');
+const card = cards.querySelectorAll('li');
 
-const cardUl = document.querySelector('.cardsArtists ul')
-const itensUl = cardUl.querySelectorAll('li')
-const itensUlPLastChild = cardUl.querySelectorAll('p:last-child')
+card.forEach((card) => {
+  card.addEventListener('mouseenter', () => {
+    card.classList.add('ativo');
+    card.querySelector('span').classList.add('ativo');
+  });
+});
 
-function addClassAtivoP(index) {
-  itensUlPLastChild.forEach(itensUlPLastChild => {
-    itensUlPLastChild.classList.remove('active')
-  })
-  itensUlPLastChild[index].classList.add('active')
-}
-
-itensUl.forEach((itemUl, index) => {
-  itemUl.addEventListener('mouseenter', () => {
-    addClassAtivoP(index)
-  })
-})
-
-function removeClassAtivoP(index) {
-  itensUlPLastChild.forEach(itensUlPLastChild => {
-    itensUlPLastChild.classList.remove('active')
-  })
-  itensUlPLastChild[index].classList.remove('active')
-}
-
-itensUl.forEach((itemUl, index) => {
-  itemUl.addEventListener('mouseleave', () => {
-    removeClassAtivoP(index)
-  })
-})
-
-}
-
-hoverUlCards()  
+card.forEach((card) => {
+  card.addEventListener('mouseleave', () => {
+    card.classList.remove('ativo');
+    card.querySelector('span').classList.remove('ativo');
+  });
+});
